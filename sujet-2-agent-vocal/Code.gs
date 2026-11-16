@@ -15,7 +15,8 @@ function installer(){
   Object.entries(defs).forEach(([name,h])=>{let s=ss.getSheetByName(name);if(!s)s=ss.insertSheet(name);if(!s.getLastRow())s.appendRow(h);s.setFrozenRows(1);s.getRange(1,1,1,h.length).setBackground('#173B54').setFontColor('#FFFFFF').setFontWeight('bold');});
   let d=ss.getSheetByName('Dashboard');if(!d)d=ss.insertSheet('Dashboard');
   d.getRange('A1:B7').setValues([['Support étudiant ESIEA','Prototype pédagogique'],['Indicateur','Valeur'],['Appels consignés',''],['Réponses confirmées résolues',''],['Demandes de suivi humain',''],['Refus ou accord IA absent',''],['Synchronisations en erreur','']]);
-  d.getRange('B3:B7').setFormulas([['=COUNTA(Appels!A2:A)'],['=COUNTIF(Appels!Q2:Q,"RESOLU")'],['=COUNTIF(Appels!R2:R,TRUE)'],['=COUNTIF(Appels!N2:N,FALSE)'],['=COUNTIF(File!E2:E,"ERREUR")']]);
+  const formulas=[['=COUNTA(Appels!A2:A)'],['=COUNTIF(Appels!Q2:Q,"RESOLU")'],['=COUNTIF(Appels!R2:R,TRUE)'],['=COUNTIF(Appels!N2:N,FALSE)'],['=COUNTIF(File!E2:E,"ERREUR")']];
+  d.getRange('B3:B7').setFormulas(formulas.map(([f])=>[ss.getSpreadsheetLocale().startsWith('fr')?f.replace(/,/g,';'):f]));
   d.getRange('A1:B2').setBackground('#173B54').setFontColor('white').setFontWeight('bold');d.setColumnWidth(1,310);d.setColumnWidth(2,220);ss.setActiveSheet(d);
 }
 function ss_(){const id=PropertiesService.getScriptProperties().getProperty('SHEET_ID');if(!id)throw Error('INSTALLER_D_ABORD');return SpreadsheetApp.openById(id);}
@@ -31,7 +32,7 @@ function extraction_(artifact){
   const out=artifact?.structuredOutputs;if(!out||typeof out!=='object')return null;
   const target=PropertiesService.getScriptProperties().getProperty('STRUCTURED_OUTPUT_ID');
   if(!target)throw Error('STRUCTURED_OUTPUT_ID_MANQUANT');
-  const entry=out[target];if(!entry||!entry.result)return null;return entry.result;
+  const entry=out[target];if(!entry||!entry.result)return null;return typeof entry.result.payload_json==='string'?JSON.parse(entry.result.payload_json):entry.result;
 }
 function minimalEvent_(m){
   const c=m.call||{},p=PropertiesService.getScriptProperties(),expected=p.getProperty('VAPI_ASSISTANT_ID');

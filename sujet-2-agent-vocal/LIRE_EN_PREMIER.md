@@ -1,19 +1,22 @@
-# Sujet 2 ESIEA
+# Sujet 2 ESIEA — état de l’installation
 
-L'agent **ESIEA Support Étudiant Guillaume** est déjà créé dans Vapi :
-https://dashboard.vapi.ai/assistants/0f39a24c-1929-4864-a081-99326619d2fc
+L’agent **ESIEA Support Étudiant Guillaume** est publié dans Vapi avec l’envoi du rapport de fin d’appel vers le Google Sheet personnel de Guillaume. La sortie structurée `esiea_support_resultat`, la réception protégée par jeton et le traitement automatique approximativement chaque minute sont configurés.
 
-Commencer par un test au micro avec Talk, après vérification des crédits. Le guide explique ensuite comment connecter un nouveau Google Sheet appartenant à voisine.guillaume@gmail.com.
+Vérifications du 16 novembre 2026 :
+- Conversation vocale : test réel réalisé et filmé par Guillaume.
+- Extraction : aperçu Vapi réussi sur l’appel réel de 11 h 47.
+- Réception HTTP et traitement : test avec un exemple explicitement fictif, ajouté dans Appels.
+- Tableau de bord : compteurs vérifiés, formules adaptées au français.
+- 14 tests locaux réussis.
 
-Le webhook, la sortie structurée et le tableau de bord ne sont pas encore configurés dans les comptes. Les fichiers fournis préparent cette installation ; 13 tests locaux réussis ne remplacent pas un test vocal et une synchronisation réelle.
+Il reste à vérifier un nouvel appel terminé après activation de la connexion. Les anciens appels ne sont pas envoyés rétroactivement. Un aperçu d’extraction et un exemple fictif ne constituent pas la preuve de ce nouvel envoi automatique.
 
-- `GUIDE_ET_RENDU.md` : architecture, installation, score, limites et sources.
-- `PROMPT_AGENT.txt` : prompt reproductible à conserver.
-- `Code.gs` : script du NOUVEAU tableur du sujet 2.
-- `EXTRACTION_VAPI.json` : sortie structurée à créer dans Vapi.
-- `EXEMPLE_WEBHOOK.json` : exemple fictif du format demandé.
-- `INFOGRAPHIE_16_9.png` : image à joindre au rendu.
-- `TESTS_ET_DEMONSTRATION.md` : tests et scénarios vidéo.
-- `VERIFICATIONS_LOCALES.txt` et `tests/test.mjs` : vérification du code.
+## Installation reproductible
 
-Guillaume indique avoir filmé un test vocal : https://cap.so/s/efg2wk4nm6wcqtz . La synchronisation Sheets et le tutoriel d'installation complet restent à vérifier. Aucun numéro n'a été acheté par cet outil et aucun contact n'a été appelé automatiquement.
+Suivre GUIDE_ET_RENDU.md. Dans le tableau de bord Vapi, on peut utiliser un objet à un champ String nommé `payload_json`, avec la consigne de retourner le JSON décrit par EXTRACTION_VAPI.json. Le script accepte ce format ainsi que l’objet imbriqué direct.
+
+Propriétés privées : SHEET_ID et WEBHOOK_TOKEN sont générées par installer ; renseigner VAPI_ASSISTANT_ID, STRUCTURED_OUTPUT_ID et VAPI_API_KEY. Aucun secret ne doit être ajouté au dépôt.
+
+Dans Vapi : Server URL = adresse Apps Script suivie de ?token=JETON_PRIVE ; Server Messages = end-of-call-report uniquement. Publier la nouvelle version. Exécuter activerSynchronisation dans Apps Script.
+
+Après un court appel de test, attendre environ une minute et contrôler Appels, File et Journal. Une ligne FICTIVE est identifiée dans son résumé et son identifiant commence par demo_.

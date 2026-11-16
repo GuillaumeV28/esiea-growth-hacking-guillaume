@@ -1,6 +1,6 @@
 Sujet 2 ESIEA — vérifications locales du 16 novembre 2026
 
-13 tests réussis, 0 échec, avec services simulés.
+14 tests réussis, 0 échec, avec services simulés.
 Exécution : node --test tests/test.mjs
 
 Couverture :
@@ -20,3 +20,4 @@ réseau Vapi n'est produite par ces tests. Les tests ne mesurent ni la qualité
 du français, ni les interruptions, ni l'exactitude du modèle en conversation.
 Le traitement simultané, les quotas réels Google et les délais réseau restent
 à tester après déploiement.
+
