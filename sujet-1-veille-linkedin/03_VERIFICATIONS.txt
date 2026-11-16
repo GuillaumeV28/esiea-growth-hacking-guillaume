@@ -1,0 +1,26 @@
+VERIFICATIONS LOCALES DU PROTOTYPE — 16 novembre 2026
+14 tests reussis sur donnees simulees. Aucune connexion aux comptes LinkedIn ou Google. Aucune video ni preuve de collecte reelle produite. Verification de syntaxe reussie pour background.js, collect.js et popup.js.
+
+✔ guillemets, espaces et accents sont encodés sans altérer la requête (1.8201ms)
+✔ plafonds stricts et configuration invalide refusés (0.9182ms)
+✔ fuseau Paris, fenêtre et fin de séance (26.1353ms)
+✔ variation de cadence bornée et aucune échéance après fin (0.6683ms)
+✔ identifiants canoniques et garde de blocage (0.8058ms)
+✔ collecte simulée : hachage avant retour, date, métriques inconnues et déduplication (20.0276ms)
+✔ collecte simulée : plafond de lot et arrêt CAPTCHA avant lecture (4.9632ms)
+✔ collecte simulée : texte tronqué marqué et aucun clic disponible (3.0141ms)
+✔ réception Apps Script : jeton, idempotence, injection de formule et absence de clé IA (3.5876ms)
+✔ réception Apps Script : auteur en clair refusé sans enregistrement (2.0613ms)
+✔ IA : une ligne OK est ignorée et une sortie invalide passe en erreur (3.3942ms)
+✔ planification : arrêt verrouillé persistant et suppression de toutes les alarmes (4.5327ms)
+✔ orchestration : un chargement, plafond restant, stockage et synchronisation (8.6808ms)
+✔ reprise réseau : file conservée, arrêt puis renvoi sans visiter LinkedIn (6.4544ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 238.5597
+

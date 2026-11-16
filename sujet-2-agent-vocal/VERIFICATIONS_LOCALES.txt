@@ -1,0 +1,22 @@
+Sujet 2 ESIEA — vérifications locales du 16 novembre 2026
+
+13 tests réussis, 0 échec, avec services simulés.
+Exécution : node --test tests/test.mjs
+
+Couverture :
+- Normalisation du JSON du sujet et score calculé côté serveur.
+- Routage d'une demande de suivi qualifiée et d'une demande incomplète.
+- Refus ou absence d'accord IA : contenu et contact supprimés du résultat.
+- Booléens stricts, durée technique et validation des thèmes et identifiants.
+- Extraction Vapi sans conservation de l'audio ou de la transcription brute.
+- Authentification par secret et absence de fuite dans la réponse.
+- Réception en file, déduplication et traitement unique.
+- Reprise bornée lorsque l'extraction Vapi manque.
+- Neutralisation des formules dans les valeurs écrites dans Sheets.
+- Ignorance des événements autres que end-of-call-report.
+
+Limites : aucune preuve d'appel vocal, de déploiement Google ou de livraison
+réseau Vapi n'est produite par ces tests. Les tests ne mesurent ni la qualité
+du français, ni les interruptions, ni l'exactitude du modèle en conversation.
+Le traitement simultané, les quotas réels Google et les délais réseau restent
+à tester après déploiement.

@@ -1,0 +1,22 @@
+# Secrets et réglages locaux
+.env
+.env.*
+!.env.example
+credentials*.json
+token*.json
+secrets*
+*.pem
+*.key
+.clasprc.json
+
+# Dépendances et fichiers temporaires
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# Données de sessions réelles
+journal-cybercap*.json
+transcripts/
+recordings/
+donnees-reelles/

@@ -1,0 +1,27 @@
+{
+  "token": "REMPLACER_PAR_LE_SECRET_DANS_UN_TEST_PRIVE",
+  "call_id": "demo_esiea_001",
+  "contact": {
+    "first_name": "Camille",
+    "last_name": "Exemple",
+    "company_name": "ESIEA — démonstration fictive"
+  },
+  "qualification": {
+    "need_summary": "Comprendre la structure JSON du webhook du sujet 2.",
+    "authority_level": "Étudiant",
+    "timeline": "Pendant la séance",
+    "budget_confirmed": null,
+    "lead_status": "Nurturing"
+  },
+  "call_metadata": {
+    "duration_seconds": 90,
+    "full_summary": "EXEMPLE FICTIF. L'agent explique les quatre blocs du JSON. L'étudiant confirme que sa question est résolue.",
+    "ai_transparency_accepted": true
+  },
+  "support": {
+    "topic": "sujet_2",
+    "resolved": true,
+    "human_followup_requested": false,
+    "summary_confirmed": true
+  }
+}

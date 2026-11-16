@@ -1,0 +1,9 @@
+<!doctype html><html lang="fr"><meta charset="utf-8"><title>CyberCap Veille</title>
+<style>body{width:440px;font:14px system-ui;padding:16px;color:#132e45}h1{font-size:20px}label{display:block;margin:12px 0}input{width:97%;padding:6px}button{padding:8px;margin:4px 2px}pre{white-space:pre-wrap;max-height:310px;overflow:auto;background:#eef3f7;padding:12px}small{display:block}</style>
+<h1>CyberCap Veille</h1><small>Les réglages de collecte se modifient dans l’onglet Parametres du tableur. Aucun clic sur « Plus ».</small>
+<label>URL privée du déploiement Apps Script<input id="endpoint" placeholder="https://script.google.com/macros/s/…/exec"></label>
+<label>Jeton privé<input id="token" type="password" autocomplete="off"></label>
+<button id="save">Enregistrer la connexion</button><button id="sync">Synchroniser les envois</button>
+<button id="run">Un seul lot</button><button id="start">Activer pour cette séance</button><button id="stop">Arrêter</button>
+<button id="demoStop">Démontrer l’arrêt simulé</button><button id="rearm">Réarmer manuellement</button><button id="refresh">Actualiser l’état</button><button id="export">Exporter le journal</button>
+<pre id="status">Chargement…</pre><script src="popup.js"></script></html>
