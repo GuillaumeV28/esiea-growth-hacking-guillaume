@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+ <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3Z" fill="#47768e"/></marker><style>text{font-family:Arial,sans-serif;fill:#17384b}.title{font-size:40px;font-weight:bold}.h{font-size:23px;font-weight:bold}.b{font-size:19px}.small{font-size:17px}.box{fill:white;stroke:#b5cad6;stroke-width:2}.arrow{fill:none;stroke:#47768e;stroke-width:3;marker-end:url(#a)}</style></defs>
+ <rect width="1600" height="900" fill="#f3f7fa"/>
+ <text x="65" y="75" class="title">Recommandation LinkedIn avec validation humaine</text>
+ <text x="65" y="115" class="b">Sujet 7 · Guillaume Voisine · ESIEA · Aucun commentaire publié automatiquement</text>
+ <rect x="65" y="180" width="280" height="165" rx="15" class="box"/><text x="90" y="220" class="h">1. LinkedIn</text><text x="90" y="260" class="b">Post public récent</text><text x="90" y="290" class="b">Lecture et sélection</text><text x="90" y="320" class="b">manuelles du texte</text>
+ <rect x="430" y="180" width="290" height="165" rx="15" class="box"/><text x="455" y="220" class="h">2. Extension Chrome</text><text x="455" y="260" class="b">Lien + texte + date</text><text x="455" y="290" class="b">Confirmation de complétude</text><text x="455" y="320" class="b">Envoi avec jeton privé</text>
+ <rect x="805" y="180" width="310" height="165" rx="15" class="box"/><text x="830" y="220" class="h">3. Apps Script / Sheets</text><text x="830" y="260" class="b">SHA-256 et déduplication</text><text x="830" y="290" class="b">Auteur pseudonymisé</text><text x="830" y="320" class="b">Six onglets et journal</text>
+ <rect x="1200" y="180" width="325" height="165" rx="15" class="box"/><text x="1225" y="220" class="h">4. Gemini</text><text x="1225" y="260" class="b">Qualification JSON</text><text x="1225" y="290" class="b">Si pertinent : proposition</text><text x="1225" y="320" class="b">Sans témoignage inventé</text>
+ <path d="M345 260H430 M720 260H805 M1115 260H1200" class="arrow"/>
+ <rect x="1200" y="445" width="325" height="165" rx="15" class="box"/><text x="1225" y="485" class="h">5. Discord privé</text><text x="1225" y="525" class="b">Résumé et commentaire</text><text x="1225" y="555" class="b">Deux liens signés</text><text x="1225" y="585" class="b">Approuver / rejeter</text>
+ <rect x="805" y="445" width="310" height="165" rx="15" class="box"/><text x="830" y="485" class="h">6. Portail humain</text><text x="830" y="525" class="b">Relire, décider, copier</text><text x="830" y="555" class="b">Aucune action au simple GET</text><text x="830" y="585" class="b">Signature valable 24 heures</text>
+ <rect x="430" y="445" width="290" height="165" rx="15" class="box"/><text x="455" y="485" class="h">7. LinkedIn manuel</text><text x="455" y="525" class="b">Ouvrir le post</text><text x="455" y="555" class="b">Coller, publier et vérifier</text><text x="455" y="585" class="b">Puis confirmer dans le portail</text>
+ <rect x="65" y="445" width="280" height="165" rx="15" class="box"/><text x="90" y="485" class="h">8. Suivi</text><text x="90" y="525" class="b">États et tableau de bord</text><text x="90" y="555" class="b">Publication déclarée</text><text x="90" y="585" class="b">Journal sans secret</text>
+ <path d="M1360 345V445 M1200 525H1115 M805 525H720 M430 525H345" class="arrow"/>
+ <rect x="65" y="690" width="1460" height="135" rx="15" fill="#e3edf3"/>
+ <text x="90" y="730" class="h">Contrôles transversaux</text><text x="90" y="767" class="b">Arrêt global · 10 préparations/jour · Cadence 45–180 s · Revue des refus, ambiguïtés et extraits incomplets</text>
+ <text x="90" y="800" class="small">Prérequis d’exécution : clé Gemini avec quota disponible et webhook Discord privé. Secrets uniquement dans les propriétés du script.</text>
+</svg>

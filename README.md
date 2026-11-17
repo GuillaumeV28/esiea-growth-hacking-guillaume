@@ -1,11 +1,23 @@
 # Exercices ESIEA de Guillaume Voisine
 
-Ce dépôt réunit les fichiers d'installation et la documentation des deux exercices de growth hacking. Il s'agit de prototypes pédagogiques, pas de services officiels de l'ESIEA.
+Ce dépôt réunit les fichiers d'installation et la documentation des exercices 1, 2 et 7 de growth hacking. Il s'agit de prototypes pédagogiques, pas de services officiels de l'ESIEA.
 
 | Exercice | Fichiers et installation | État |
 |---|---|---|
 | Sujet 1 — Veille de publications LinkedIn | [Ouvrir le dossier](sujet-1-veille-linkedin/) · [Guide d'installation](sujet-1-veille-linkedin/04_GUIDES_ET_VIDEOS.md) | Extension créée et chargée dans Chrome ; intégration complète encore à valider |
 | Sujet 2 — Agent vocal entrant de support étudiant | [Ouvrir le dossier](sujet-2-agent-vocal/) · [Guide d'installation](sujet-2-agent-vocal/GUIDE_ET_RENDU.md) | Agent créé dans Vapi ; test vocal filmé par Guillaume ; connexion Sheets configurée ; réception fictive et extraction testées ; nouvel appel automatique à vérifier |
+| Sujet 7 — Recommandation LinkedIn | [Ouvrir le dossier](sujet-7-preuve-sociale/) | Tableau et réception déployés ; Gemini et Discord à configurer |
+
+## Sujet 7
+
+L’agent de recommandation LinkedIn recommande l’ESIEA de manière transparente depuis un profil étudiant réel. Le mode B prévoit une notification Discord, des liens de validation signés et une publication manuelle. Le tableau à six onglets et ses 15 extraits réels sourcés sont préparés. Gemini et Discord restent à configurer ; aucune analyse IA ni publication réelle du sujet 7 n’est revendiquée.
+
+- [Fichiers et installation du sujet 7](sujet-7-preuve-sociale/)
+- [README et réponses aux cinq questions](sujet-7-preuve-sociale/README.md)
+- [Schéma fonctionnel](sujet-7-preuve-sociale/SCHEMA_FONCTIONNEL.svg)
+- [Tutoriel vidéo de quatre minutes](sujet-7-preuve-sociale/TUTO_VIDEO_4_MIN.md)
+
+18 tests locaux réussis. Les 15 extraits incomplets ne remplacent pas 15 posts complets effectivement traités par Gemini.
 
 ## Sujet 1
 
@@ -54,4 +66,5 @@ Sujet 1 : 14 tests locaux réussis. Sujet 2 : 14 tests locaux réussis. Les rapp
 Aucun mot de passe, cookie, jeton actif ou clé API n'est inclus. Ne pas ajouter de secrets au dépôt. Les exemples contiennent des valeurs factices. Les valeurs privées se configurent uniquement dans les propriétés du script ou les paramètres locaux de l'application.
 
 Ce dépôt ne contient ni notes d'étudiants, ni transcriptions réelles, ni base de prospects ou d'appels.
+
 
