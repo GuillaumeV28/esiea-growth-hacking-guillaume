@@ -4,12 +4,13 @@ Projet pédagogique de Guillaume Voisine. **Option A**, acteur recommandé : **E
 
 ## État réel du rendu
 
-- Code Apps Script, extension Chrome de collecte assistée, portail de décision et schéma fournis.
-- Tableau à six onglets créé sur le compte Guillaume, 15 extraits importés. Point de réception déployé et testé : authentification et déduplication HTTP réussies.
-- 18 tests locaux réussis sur services simulés. Ce résultat ne prouve pas un appel Gemini ou Discord réel.
-- 15 publications LinkedIn réelles référencées dans `Sources.gs`. Leurs extraits de moins de 26 mots sont **incomplets**, les dates non vérifiées. Ne pas prétendre disposer de 15 posts complets analysés par IA.
-- Un projet Gemini séparé a été préparé sans activation de facturation. La création et la configuration de sa clé attendent l’accord de Guillaume ; Discord demande une connexion personnelle. L’analyse, les notifications et la démonstration de bout en bout restent à valider après configuration.
-- Le système reste arrêté (`ACTIF=false`) jusqu’à cette configuration. Aucun commentaire publié par l’outil ou par l’assistant.
+- Tableau privé à six onglets installé sur le compte Guillaume ; réception protégée déployée en version 3 et testée.
+- Gemini gratuit configuré et testé réellement avec `gemini-3.5-flash-lite`, sans activation de facturation.
+- 15 publications uniques analysées par Gemini : 17 captures, dont deux versions remplacées après relecture complète. Les 13 autres restent des extraits incomplets, donc en revue humaine ; ce ne sont pas 15 textes complets.
+- Une recommandation générée, reçue dans le serveur Discord privé. Son portail signé s’ouvre avec l’état A_VALIDER ; aucune approbation réelle ni publication LinkedIn n’a été effectuée.
+- 22 tests locaux réussis, 0 échec, sur services simulés. Ils complètent les tests réels, sans les remplacer.
+- Traitement activé avec limites quotidiennes et attente persistante en cas de limitation Discord. Les anciennes erreurs de configuration et indisponibilités restent visibles dans le journal (7 erreurs historiques sur 24 h au contrôle).
+- Restent : décision humaine sur la proposition, test de l’extension dans Chrome et vidéo de 3 à 5 minutes. Aucune publication automatique LinkedIn.
 
 ## Fichiers
 
@@ -29,7 +30,7 @@ Projet pédagogique de Guillaume Voisine. **Option A**, acteur recommandé : **E
 2. Coller `Code.gs` dans Code.gs. Ajouter un fichier `Sources.gs` et y coller le second fichier. Enregistrer. Exécuter `installer`, examiner les autorisations Google et vérifier le compte du développeur. Le script crée exactement CONFIG, PROFIL_AMBASSADEUR, PROMPTS, VEILLE_POSTS, JOURNAL_LOGS et DASHBOARD.
 3. Exécuter `importerSourcesReelles`. Vérifier les 15 liens et les mentions `Texte_Tronque=true`, `A_QUALIFIER`. Cet import ne lance pas Gemini et ne publie rien.
 4. Dans Paramètres du projet → Propriétés du script, renseigner **GEMINI_API_KEY**, **DISCORD_WEBHOOK** et, après déploiement, **WEBAPP_URL**. Les valeurs réelles ne doivent jamais aller dans CONFIG, le dépôt, les vidéos ou le prompt. `installer` génère SHEET_ID, INGEST_TOKEN, AUTHOR_SALT et SIGNING_SECRET.
-5. Dans [Google AI Studio](https://aistudio.google.com/api-keys), utiliser un projet éligible au quota gratuit. Une clé valide ne garantit pas un quota de génération disponible. Le prototype propose `gemini-2.5-flash` ; ajuster GEMINI_MODEL dans CONFIG à un modèle effectivement disponible. Le sujet mentionne Gemini 1.5 Flash : sa disponibilité n’est pas présumée. Ne pas activer de facturation pour simplement contourner un échec. HTTP 402/403/429 provoque l’arrêt.
+5. Dans [Google AI Studio](https://aistudio.google.com/api-keys), utiliser un projet éligible au quota gratuit. Une clé valide ne garantit pas un quota de génération disponible. Le prototype propose `gemini-3.5-flash-lite` ; ajuster GEMINI_MODEL dans CONFIG à un modèle effectivement disponible. Le sujet mentionne Gemini 1.5 Flash : sa disponibilité n’est pas présumée. Ne pas activer de facturation pour simplement contourner un échec. HTTP 402/403/429 provoque l’arrêt.
 6. Dans Discord, utiliser un serveur et un salon de test privés dont vous avez la gestion. Paramètres du salon → Intégrations → Webhooks → Nouveau webhook → Copier l’URL. La création du compte, si nécessaire, reste à faire par son titulaire. Ajouter l’URL privée à DISCORD_WEBHOOK. Pas de Make, Zapier ou n8n.
 7. Déployer → Nouveau déploiement → Application Web, exécution en tant que propriétaire. L’accès doit permettre à l’extension et aux liens Discord de fonctionner sans connexion Google. Le backend protège l’import par jeton et les décisions par signature à durée limitée. Ajouter l’URL `/exec` à WEBAPP_URL. Les changements de code exigent une nouvelle version du déploiement ; les propriétés privées n’exigent pas de redéploiement.
 8. Dans Chrome, ouvrir `chrome://extensions`, activer le mode développeur et Charger l’extension non empaquetée → dossier `extension`. Dans sa section Connexion privée : URL `/exec` et INGEST_TOKEN. Ce jeton est stocké dans le profil Chrome local, pas chiffré par l’extension ; ne pas utiliser un ordinateur partagé. Aucun mot de passe LinkedIn demandé.

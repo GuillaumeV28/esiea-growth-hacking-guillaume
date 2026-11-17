@@ -1,26 +1,16 @@
 # Vérification du 17 novembre 2026
 
-## Réalisé localement
+22 tests locaux Node.js réussis, 0 échec. Services simulés : authentification, signatures, accès administrateur, déduplication, révisions, refus, texte incomplet, quotas, concurrence, effacement et reprise Discord 429 respectant le délai serveur.
 
-18 tests Node.js réussis, 0 échec. Services Google simulés, aucune requête IA ou Discord pendant ces tests.
+## Tests réels dans le compte Guillaume
 
-Couverture : 15 sources uniques et extraits courts, déduplication SHA-256, pseudonymisation d’auteur, invalidation des révisions, URLs autorisées, refus de recommandation, ambiguïté, JSON strict, absence de faux témoignage, quasi-doublons de commentaires, secret d’import, arrêt global, signatures expirées et altérées, approbation idempotente, confirmation manuelle, quotas persistants, concurrence de tâches et effacement.
+- Six onglets installés ; réception HTTP : mauvais jeton refusé, jeton valide accepté et doublon ignoré.
+- Projet Gemini gratuit : génération HTTP 200 puis 15 qualifications effectives.
+- 17 captures pour 15 publications uniques ; deux anciennes versions remplacées, 13 extraits incomplets conservés en revue humaine.
+- Une recommandation générée et notification effectivement reçue dans Discord privé.
+- Déploiement version 3 effectué ; portail signé ouvert : A_VALIDER, sans modification d’état au simple clic.
+- Tableau de bord : 15 analyses, une recommandation, zéro publication déclarée. Sept erreurs historiques sur 24 h ; elles restent traçables.
 
-## Réalisé dans le compte Guillaume
+## Limites restantes
 
-- Classeur natif créé, six onglets installés et contrôlés visuellement.
-- Import confirmé par le journal : 15 extraits ajoutés, 0 doublon, analyseGeminiEffectuee=false.
-- Déploiement Web effectué avec l’autorisation explicite de Guillaume. Le tableur reste privé.
-- Test HTTP réel `testerReception` réussi : mauvais jeton refusé, jeton privé accepté, doublon ignoré, aucun appel Gemini ou Discord.
-- CONFIG.ACTIF=false ; les secrets sont uniquement dans les propriétés du script.
-
-## Vérifications réelles encore nécessaires
-
-1. Créer et configurer la clé du projet Gemini séparé, avec l’accord de Guillaume et un quota gratuit disponible.
-2. Ajouter une clé Gemini avec un quota disponible et vérifier une génération JSON réelle.
-3. Ajouter un webhook Discord privé et vérifier la notification.
-4. Relire et compléter les textes et dates lorsque nécessaire. Un extrait incomplet ne doit pas déclencher une recommandation prête à publier.
-5. Vérifier le portail : ouvrir un lien ne change pas l’état ; confirmer une approbation le change ; rejeter empêche la publication proposée.
-6. Effectuer un parcours réel sur un post pertinent, jusqu’à validation ou publication manuelle souhaitée, puis filmer 3 à 5 minutes.
-
-Les captures, résultats locaux et extraits sources ne remplacent pas ces preuves de fonctionnement dans les comptes utilisés.
+L’approbation réelle reste à effectuer par Guillaume. La publication LinkedIn est toujours manuelle et facultative ; aucune n’est revendiquée. L’extension de collecte est fournie mais son chargement dans Chrome n’a pas encore été vérifié pour ce sujet. La vidéo reste à enregistrer. Les 15 analyses portent majoritairement sur des extraits, pas sur 15 posts complets.
