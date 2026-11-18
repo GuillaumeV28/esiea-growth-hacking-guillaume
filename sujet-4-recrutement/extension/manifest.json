@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"ESIEA Sujet 4 — Collecte offre","version":"1.0.0","description":"Prépare une offre sélectionnée pour le suivi de candidatures privé.","permissions":["activeTab","scripting","clipboardWrite"],"action":{"default_popup":"popup.html"}}

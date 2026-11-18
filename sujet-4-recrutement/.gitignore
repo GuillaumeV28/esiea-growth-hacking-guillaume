@@ -1,0 +1,8 @@
+Prive_Guillaume/
+*.eml
+*.xlsx
+*.pdf
+*.inspect.ndjson
+*.env
+*secret*
+*token*
