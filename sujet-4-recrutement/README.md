@@ -1,5 +1,7 @@
 # Sujet 4 — Personnalisation des candidatures
 
+> **Mise à jour du 19 novembre 2026 :** test réel réussi sur le compte Guillaume, statut DOCUMENTS_A_RELIRE, CV PDF et courrier créés dans Drive. Les références IA et espaces HTML de SmartRecruiters ont été corrigés. À la demande de Guillaume, Gmail est désactivé et sa permission a été retirée du manifeste. Les passages Gmail ci-dessous décrivent une option historique, non activée. Voir CORRECTION_19_NOVEMBRE.md.
+
 Guillaume Voisine. Plateforme principale : Google Sheets. Collecte par URL publique SmartRecruiters, ou extension Chrome pour le texte sélectionné sur un autre site. Apps Script prépare l’analyse Gemini, un CV Google Docs exporté en PDF, un courrier et un brouillon Gmail avec PDF et signature illustrée. **Aucun envoi d’email n’est implémenté.**
 
 ## État réel

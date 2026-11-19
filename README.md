@@ -6,7 +6,7 @@ Ce dépôt réunit les fichiers d'installation et la documentation des exercices
 |---|---|---|
 | Sujet 1 — Veille de publications LinkedIn | [Ouvrir le dossier](sujet-1-veille-linkedin/) · [Guide d'installation](sujet-1-veille-linkedin/04_GUIDES_ET_VIDEOS.md) | Extension créée et chargée dans Chrome ; intégration complète encore à valider |
 | Sujet 2 — Agent vocal entrant de support étudiant | [Ouvrir le dossier](sujet-2-agent-vocal/) · [Guide d'installation](sujet-2-agent-vocal/GUIDE_ET_RENDU.md) | Agent créé dans Vapi ; test vocal filmé par Guillaume ; connexion Sheets configurée ; réception fictive et extraction testées ; nouvel appel automatique à vérifier |
-| Sujet 4 — Candidatures personnalisées | [Ouvrir le dossier](sujet-4-recrutement/) | Code et fichiers locaux prêts ; connexion Google Guillaume et test Gemini/Gmail à terminer |
+| Sujet 4 — Candidatures personnalisées | [Ouvrir le dossier](sujet-4-recrutement/) | Test réel réussi : CV PDF et courrier dans Drive ; Gmail désactivé à la demande de Guillaume |
 | Sujet 6 — Cascade de prompts | [Ouvrir le dossier](sujet-6-cascade-prompts/) | Installé et testé : programme IA, JSON et graphique PNG, projet sans frais |
 | Sujet 7 — Recommandation LinkedIn | [Ouvrir le dossier](sujet-7-preuve-sociale/) | Gemini et Discord connectés ; 15 analyses réelles ; une proposition à valider |
 
@@ -74,7 +74,7 @@ Ce dépôt ne contient ni notes d'étudiants, ni transcriptions réelles, ni bas
 
 [Outil et installation](sujet-4-recrutement/README.md) · [Tutoriel de quatre minutes](sujet-4-recrutement/TUTO_VIDEO_4_MIN.md) · [Vérification et limites](sujet-4-recrutement/VERIFICATION.md).
 
-14 tests locaux réussis. Le CV, le courrier, le suivi personnel et le message EML restent hors du dépôt public. Aucun email envoyé ; aucun brouillon Gmail réel revendiqué avant test dans le compte Guillaume.
+19 tests locaux réussis. Test réel Gemini → CV PDF et courrier Drive vérifié le 19 novembre 2026. Le mode actuel s’arrête à DOCUMENTS_A_RELIRE, sans accès Gmail. Les documents personnels restent hors du dépôt public. [Détails de la correction](sujet-4-recrutement/CORRECTION_19_NOVEMBRE.md).
 
 ## Sujet 6
 
