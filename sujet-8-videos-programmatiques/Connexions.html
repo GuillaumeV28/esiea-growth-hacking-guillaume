@@ -1,0 +1,12 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>body{font:14px Arial;padding:15px;color:#172033}label{display:block;margin:15px 0 5px}input{box-sizing:border-box;width:100%;padding:9px}button{padding:10px;margin-top:14px;background:#2563eb;color:white;border:0;border-radius:5px}#message{margin-top:14px;white-space:pre-wrap}a{color:#2563eb}</style></head><body>
+<p>La clé Gemini reste dans les propriétés privées du script. Le fichier du moteur contient seulement l’adresse du service et son jeton privé.</p>
+<label>Clé Gemini — laisser vide pour conserver la clé existante</label><input id="cle" type="password" autocomplete="off">
+<label>Adresse du déploiement Apps Script, terminée par /exec</label><input id="url" type="url" placeholder="https://script.google.com/macros/s/…/exec">
+<button onclick="sauver()">Enregistrer</button> <button onclick="exporter()">Télécharger la connexion du moteur</button><div id="message" role="status"></div>
+<p>Ce fichier est privé : ne pas le mettre sur GitHub et ne pas l’afficher dans la vidéo.</p>
+<script>
+const message=document.getElementById('message');
+function erreur(e){message.textContent='Erreur : '+e.message;}
+function sauver(){google.script.run.withSuccessHandler(()=>{document.getElementById('cle').value='';message.textContent='Connexion enregistrée.';}).withFailureHandler(erreur).enregistrerConnexionsSujet8({cle:document.getElementById('cle').value.trim(),url:document.getElementById('url').value.trim()});}
+function exporter(){google.script.run.withSuccessHandler(c=>{if(!c.url||!c.token){message.textContent='Enregistre d’abord l’adresse du déploiement.';return;}const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(c,null,2)],{type:'application/json'}));a.href=url;a.download='configuration_privee.json';a.click();URL.revokeObjectURL(url);message.textContent='Place configuration_privee.json à côté du fichier moteur.py.';}).withFailureHandler(erreur).configurationMoteurSujet8();}
+</script></body></html>

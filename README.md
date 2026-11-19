@@ -1,6 +1,6 @@
 # Exercices ESIEA de Guillaume Voisine
 
-Ce dépôt réunit les fichiers d'installation et la documentation des exercices 1, 2, 4, 6 et 7 de growth hacking. Il s'agit de prototypes pédagogiques, pas de services officiels de l'ESIEA.
+Ce dépôt réunit les fichiers d'installation et la documentation des exercices 1, 2, 4, 6, 7 et 8 de growth hacking. Il s'agit de prototypes pédagogiques, pas de services officiels de l'ESIEA.
 
 | Exercice | Fichiers et installation | État |
 |---|---|---|
@@ -9,6 +9,7 @@ Ce dépôt réunit les fichiers d'installation et la documentation des exercices
 | Sujet 4 — Candidatures personnalisées | [Ouvrir le dossier](sujet-4-recrutement/) | Test réel réussi : CV PDF et courrier dans Drive ; Gmail désactivé à la demande de Guillaume |
 | Sujet 6 — Cascade de prompts | [Ouvrir le dossier](sujet-6-cascade-prompts/) | Installé et testé : programme IA, JSON et graphique PNG, projet sans frais |
 | Sujet 7 — Recommandation LinkedIn | [Ouvrir le dossier](sujet-7-preuve-sociale/) | Gemini et Discord connectés ; 15 analyses réelles ; une proposition à valider |
+| Sujet 8 — Vidéos programmatiques | [Ouvrir le dossier](sujet-8-videos-programmatiques/) | Deux générations complètes testées : MP4 de 54 secondes, Slides et GIF dans Drive privé ; moteur Windows |
 
 ## Sujet 7
 
@@ -81,3 +82,9 @@ Ce dépôt ne contient ni notes d'étudiants, ni transcriptions réelles, ni bas
 [Code et installation](sujet-6-cascade-prompts/README.md) · [Deux tutos de trois minutes](sujet-6-cascade-prompts/TUTOS_3_MIN.md) · [Vérifications](sujet-6-cascade-prompts/VERIFICATION.md).
 
 Quatre blocs 2×5 reliés par formules natives ; deux appels texte Gemini par cascade, puis rendu PNG Google Charts. Cascade réelle terminée et image affichée dans Sheets, projet sans frais vérifié. 15 tests locaux réussis. Cette alternative gratuite ne génère pas de photos Nano Banana ni de vidéos. Aucune clé API dans le dépôt.
+
+## Sujet 8
+
+[Code et installation](sujet-8-videos-programmatiques/README.md) · [Installation et utilisation à filmer](sujet-8-videos-programmatiques/TUTOS.md) · [Vérifications](sujet-8-videos-programmatiques/VERIFICATION.md).
+
+Deux scénarios Gemini distincts, de 129 et 127 mots, ont produit chacun une vidéo de 54 secondes, une présentation native de cinq pages et un GIF animé. Le dépôt Drive et les liens dans Sheets sont automatiques. 14 tests techniques réussis. La voix Windows et le rendu sont locaux ; le moteur doit rester ouvert. Aucun service payant activé. Les CV, les vidéos personnelles, les connexions privées et leurs liens sont exclus du dépôt.
