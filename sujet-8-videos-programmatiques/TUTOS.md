@@ -1,3 +1,5 @@
+Sur le tableau Guillaume déjà installé, les lignes 2 et 3 sont les preuves terminées. La ligne 4 est prête pour filmer une nouvelle utilisation : lancer LANCER.cmd puis sélectionner cette ligne. Le moteur doit rester ouvert.
+
 # Installation — environ 3 minutes
 
 **À l’écran :** GitHub, dossier sujet 8, puis Drive.

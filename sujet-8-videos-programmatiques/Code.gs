@@ -11,7 +11,7 @@ function safe8_(s){return typeof s==='string'&&/^[=+@-]/.test(s)?"'"+s:s;}
 function log8_(etape,message,niveau='INFO'){ss8_().getSheetByName('CONFIG_LOG').appendRow([new Date(),niveau,etape,safe8_(String(message).slice(0,350))]);}
 function onOpen(){SpreadsheetApp.getUi().createMenu('Vidéos IA').addItem('1. Installer / vérifier','installerSujet8').addItem('2. Connexions privées','connexionsSujet8').addItem('3. Générer la ligne sélectionnée','genererLigneSujet8').addItem('Reprendre une exécution interrompue','reprendreSujet8').addToUi();}
 function installerSujet8(){
- owner8_();const ss=SpreadsheetApp.getActiveSpreadsheet();p8_().setProperty('TABLEAU_ID',ss.getId());
+ owner8_();const ss=SpreadsheetApp.getActiveSpreadsheet();ss.setSpreadsheetTimeZone('Europe/Paris');ss.setSpreadsheetLocale('fr_FR');p8_().setProperty('TABLEAU_ID',ss.getId());
  const definitions={PRODUCTION:S8_HEADERS,PROMPTS:['ID_Prompt','Role_Systeme','Template_Prompt_User','Temperature','Model_Name'],CONFIG_LOG:['Timestamp','Niveau_Log','Etape_Workflow','Message_Detaille']};
  for(const [nom,titres]of Object.entries(definitions)){const s=ss.getSheetByName(nom)||ss.insertSheet(nom);if(s.getLastRow()===0)s.appendRow(titres);else if(s.getRange(1,1,1,titres.length).getValues()[0].join('|')!==titres.join('|'))throw Error('COLONNES_INCOMPATIBLES_'+nom);s.setFrozenRows(1);s.setHiddenGridlines(true);s.getRange(1,1,1,titres.length).setFontWeight('bold').setBackground('#e8eaed').setWrap(true);s.setRowHeight(1,55);s.setColumnWidths(1,titres.length,180);}
  const pr=ss.getSheetByName('PROMPTS');if(pr.getLastRow()===1)pr.appendRow(['PITCH_B',S8_SYSTEME,'À partir des trois PDF, prépare un pitch ciblé. Angle : {{ANGLE}}. Sources : {{SOURCES}}',0.2,'gemini-3.1-flash-lite']);

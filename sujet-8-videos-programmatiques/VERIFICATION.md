@@ -1,6 +1,6 @@
 # Vérification réelle — 19 novembre 2026
 
-Le tableau natif et son script sont installés sur le compte Google Guillaume. Le projet Gemini utilisé est celui sans facturation configuré pour les exercices précédents. Les vidéos restent en accès privé.
+Le tableau natif et son script sont installés sur le compte Google Guillaume. Le projet Gemini utilisé est celui sans facturation configuré pour les exercices précédents. Les vidéos restent en accès privé. La lecture du MP4 final dans Drive a été vérifiée jusqu’à 0:54. Le tableau utilise le fuseau Europe/Paris.
 
 Deux lignes distinctes ont été déclenchées depuis le menu de Google Sheets, avec des angles éditoriaux différents. La chaîne a extrait les trois PDF privés, appelé Gemini 3.1 Flash-Lite, généré cinq scènes sourcées et une présentation native, produit une voix Windows française générique et assemblé le MP4. Le moteur a envoyé automatiquement le MP4 et le GIF vers Drive et écrit leurs liens et durées dans la Sheet. Aucun réupload manuel après déclenchement.
 
