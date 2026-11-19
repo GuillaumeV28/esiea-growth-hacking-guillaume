@@ -1,0 +1,7 @@
+*.inspect.ndjson
+*.env
+*secret*
+*token*
+
+LIENS_PRIVES.md
+PREUVE_CASCADE.*
